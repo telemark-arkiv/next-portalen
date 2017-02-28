@@ -9,7 +9,6 @@
     "email": "geir.gasodden@pythonia.no",
     "url": "https://github.com/zrrrzzt"
   },
-  "main": "index.js",
   "engines": {
     "node": ">=7.6.0"
   },
