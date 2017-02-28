@@ -53,11 +53,16 @@
     "test-listen": "1.0.1"
   },
   "dependencies": {
+    "axios": "0.15.3",
+    "good": "7.1.0",
+    "good-console": "6.4.0",
     "hapi": "16.1.0",
+    "hapi-auth-cookie-issamesite-patch": "6.1.2",
+    "jsonwebtoken": "7.3.0",
     "next": "^2.0.0-beta",
     "react": "15.4.2",
     "react-dom": "15.4.2",
-    "good": "7.1.0",
-    "good-console": "6.4.0"
+    "simple-encryptor": "1.1.0",
+    "yar": "8.1.2"
   }
 }

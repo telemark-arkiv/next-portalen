@@ -3,7 +3,29 @@
 const next = require('next')
 const Hapi = require('hapi')
 const Good = require('good')
-const { pathWrapper, defaultHandlerWrapper } = require('./next-wrapper')
+const Yar = require('yar')
+const hapiAuthCookie = require('hapi-auth-cookie-issamesite-patch')
+const { defaultHandlerWrapper } = require('./next-wrapper')
+const validateSession = require('./lib/validate-session')
+const config = require('./config')
+const routes = require('./routes')
+
+const yarOptions = {
+  storeBlank: false,
+  cookieOptions: {
+    password: config.YAR_SECRET,
+    isSecure: process.env.NODE_ENV !== 'development',
+    isSameSite: 'Lax'
+  }
+}
+
+const goodOptions = {
+  reporters: {
+    console: [{
+      module: 'good-console'
+    }, 'stdout']
+  }
+}
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -11,16 +33,9 @@ const server = new Hapi.Server()
 
 // add request logging (optional)
 const pluginOptions = [
-  {
-    register: Good,
-    options: {
-      reporters: {
-        console: [{
-          module: 'good-console'
-        }, 'stdout']
-      }
-    }
-  }
+  {register: Good, options: goodOptions},
+  {register: Yar, options: yarOptions},
+  {register: hapiAuthCookie}
 ]
 
 app.prepare()
@@ -28,26 +43,18 @@ app.prepare()
     server.connection({ port: 3000 })
     server.register(pluginOptions)
       .then(() => {
-        server.route({
-          method: 'GET',
-          path: '/a',
-          handler: pathWrapper(app, '/a')
+        server.auth.strategy('session', 'cookie', {
+          password: config.COOKIE_SECRET,
+          cookie: 'tilskudd-session',
+          validateFunc: validateSession,
+          redirectTo: `${config.SSO_URL}?origin=${config.ORIGIN_URL}`,
+          isSecure: process.env.NODE_ENV !== 'development',
+          isSameSite: 'Lax'
         })
 
-        server.route({
-          method: 'GET',
-          path: '/ping',
-          handler: (request, reply) => reply('pong'),
-          config: {
-            auth: false
-          }
-        })
+        server.auth.default('session')
 
-        server.route({
-          method: 'GET',
-          path: '/b',
-          handler: pathWrapper(app, '/b')
-        })
+        server.route(routes)
 
         server.route({
           method: 'GET',
