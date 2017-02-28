@@ -45,7 +45,7 @@ app.prepare()
       .then(() => {
         server.auth.strategy('session', 'cookie', {
           password: config.COOKIE_SECRET,
-          cookie: 'tilskudd-session',
+          cookie: 'portalen-session',
           validateFunc: validateSession,
           redirectTo: `${config.SSO_URL}?origin=${config.ORIGIN_URL}`,
           isSecure: process.env.NODE_ENV !== 'development',
