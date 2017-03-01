@@ -19,22 +19,22 @@
     "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
     "setup": "npm install",
     "standard-fix": "standard --fix",
-    "dev": "node server.js",
+    "dev": "next",
     "build": "next build",
-    "start": "node server.js",
+    "start": "next start",
     "now-deploy": "npm test && now --npm && now alias"
   },
   "keywords": [
-    "microservice",
-    "micro",
-    "echo"
+    "next",
+    "portalen",
+    "Telemark fylkeskommune"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/telemark/micro-auth-ldap.git"
+    "url": "https://github.com/telemark/next-portalen.git"
   },
   "bugs": {
-    "url": "https://github.com/telemark/micro-auth-ldap/issues"
+    "url": "https://github.com/telemark/next-portalen/issues"
   },
   "now": {
     "alias": [
@@ -54,15 +54,10 @@
   },
   "dependencies": {
     "axios": "0.15.3",
-    "good": "7.1.0",
-    "good-console": "6.4.0",
-    "hapi": "16.1.0",
-    "hapi-auth-cookie-issamesite-patch": "6.1.2",
-    "jsonwebtoken": "7.3.0",
+    "jws": "3.1.4",
     "next": "^2.0.0-beta",
     "react": "15.4.2",
     "react-dom": "15.4.2",
-    "simple-encryptor": "1.1.0",
-    "yar": "8.1.2"
+    "simple-encryptor": "1.1.0"
   }
 }
