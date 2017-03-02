@@ -19,9 +19,9 @@
     "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
     "setup": "npm install",
     "standard-fix": "standard --fix",
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
     "now-deploy": "npm test && now --npm && now alias"
   },
   "keywords": [
@@ -49,13 +49,16 @@
     "coveralls": "2.11.16",
     "nsp": "2.6.2",
     "nyc": "10.1.2",
-    "standard": "8.6.0",
+    "standard": "9.0.0",
     "test-listen": "1.0.1"
   },
   "dependencies": {
     "axios": "0.15.3",
     "jws": "3.1.4",
+    "micro": "7.0.6",
+    "muicss": "0.9.9-rc2",
     "next": "^2.0.0-beta",
+    "node-session": "1.2.1",
     "react": "15.4.2",
     "react-dom": "15.4.2",
     "simple-encryptor": "1.1.0"
