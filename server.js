@@ -19,8 +19,7 @@ const config = require('./config')
 const sessionOptions = {
   secret: config.SESSION_SECRET,
   files: `${os.tmpdir()}/sessions`,
-  driver: 'file',
-  secure: !dev
+  driver: 'file'
 }
 
 const session = new NodeSession(sessionOptions)
