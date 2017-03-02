@@ -6,6 +6,7 @@ import withSession from '../components/with-session'
 import LogoutButton from '../components/logout-button'
 import Head from '../components/head'
 import Appbar from '../components/appbar'
+import Shortcuts from '../components/shortcuts'
 import Container from 'muicss/lib/react/container'
 
 const Index = ({ session, isLoggedIn }) => {
@@ -15,6 +16,7 @@ const Index = ({ session, isLoggedIn }) => {
       <Appbar />
       <Container>
         <h1>Velkommen {session.user.displayName}</h1>
+        <Shortcuts roles={session.user.roles} />
         <div>
           <LogoutButton session={session}>Logg ut</LogoutButton>
         </div>
