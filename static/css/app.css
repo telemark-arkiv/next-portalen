@@ -17,6 +17,11 @@ button.mui-btn:hover {
     color: black;
 }
 
+.mui-appbar {
+    background-color: #ffd520;
+    color: black;
+}
+
 .mui-textfield>input:focus, .mui-textfield>textarea:focus {
     border-color: #6ac4ae;
 }
