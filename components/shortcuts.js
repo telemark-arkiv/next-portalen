@@ -13,8 +13,8 @@ export default class Shortcuts extends React.Component {
   }
 
   async componentDidMount () {
-    const url = `${config.SERVICES.shortcuts}/shortcuts`
-    const shortcuts = await axios.post(url, {roles: this.props.roles})
+    const url = `${config.SERVICES.shortcuts}/shortcuts?roles=${this.props.roles.join('|')}`
+    const shortcuts = await axios.get(url)
     this.setState({shortcuts: shortcuts.data})
   }
 
