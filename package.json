@@ -38,7 +38,8 @@
   },
   "now": {
     "alias": [
-      "portalen.next.t-fk.win"
+      "portalen.next.t-fk.win",
+      "portalen.next.t-fk.no"
     ],
     "env": {
       "NODE_ENV": "production"

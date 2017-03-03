@@ -1,5 +1,5 @@
 'use strict'
-process.env.ORIGIN_URL = 'http://localhost:3000/auth/login'
+
 module.exports = {
   SSO_URL: process.env.SSO_URL || 'https://sso.router.t-fk.win',
   ORIGIN_URL: process.env.ORIGIN_URL || 'https://portalen.next.t-fk.win/auth/login',
