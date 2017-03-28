@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "ava": "0.18.2",
-    "coveralls": "2.11.16",
+    "coveralls": "2.12.0",
     "nsp": "2.6.3",
     "nyc": "10.1.2",
     "standard": "9.0.0",
@@ -56,8 +56,8 @@
   "dependencies": {
     "axios": "0.15.3",
     "jws": "3.1.4",
-    "micro": "7.0.6",
-    "muicss": "0.9.9-rc2",
+    "micro": "7.3.0",
+    "muicss": "0.9.9",
     "next": "^2.0.0-beta",
     "node-session": "1.2.1",
     "react": "15.4.2",
