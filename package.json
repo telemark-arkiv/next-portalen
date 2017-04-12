@@ -60,7 +60,7 @@
     "muicss": "0.9.15",
     "next": "^2.0.0-beta",
     "node-session": "1.2.1",
-    "react-dom": "15.5.3",
+    "react-dom": "15.5.4",
     "react": "15.5.3",
     "simple-encryptor": "1.1.0"
   }
