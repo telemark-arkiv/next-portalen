@@ -11,7 +11,7 @@ module.exports = {
     roles: 'https://roles.portalen.micro.t-fk.no',
     links: 'https://links.portalen.micro.t-fk.no',
     shortcuts: 'https://shortcuts.portalen.micro.t-fk.no',
-    content: 'https://roles.portalen.micro.t-fk.no',
+    content: 'https://content.portalen.micro.t-fk.no',
     tasks: 'https://roles.portalen.micro.t-fk.no',
     messages: 'https://roles.portalen.micro.t-fk.no'
   }

@@ -10,7 +10,7 @@
     "url": "https://github.com/zrrrzzt"
   },
   "engines": {
-    "node": ">=7.7.1"
+    "node": ">=7.9.0"
   },
   "scripts": {
     "test": "standard && nsp check && ava",
@@ -38,7 +38,6 @@
   },
   "now": {
     "alias": [
-      "portalen.next.t-fk.win",
       "portalen.next.t-fk.no"
     ],
     "env": {
@@ -58,10 +57,10 @@
     "jws": "3.1.4",
     "micro": "7.3.0",
     "muicss": "0.9.15",
-    "next": "^2.0.0-beta",
+    "next": "2.1.1",
     "node-session": "1.2.1",
     "react-dom": "15.5.4",
-    "react": "15.5.3",
+    "react": "15.5.4",
     "simple-encryptor": "1.1.0"
   }
 }
