@@ -1,7 +1,7 @@
 {
   "name": "next-portalen",
   "description": "Portalen Next",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "license": "MIT",
   "private": true,
   "author": {
@@ -57,7 +57,7 @@
     "jws": "3.1.4",
     "micro": "7.3.3",
     "muicss": "0.9.15",
-    "next": "3.0.0-beta7",
+    "next": "2.4.0",
     "node-session": "1.2.1",
     "react-dom": "15.5.4",
     "react": "15.5.4",
