@@ -1,7 +1,7 @@
 {
   "name": "next-portalen",
   "description": "Portalen Next",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "license": "MIT",
   "private": true,
   "author": {
@@ -59,8 +59,8 @@
     "muicss": "0.9.15",
     "next": "2.4.2",
     "node-session": "1.2.1",
-    "react-dom": "15.5.4",
     "react": "15.6.0",
+    "react-dom": "15.6.0",
     "simple-encryptor": "1.1.0"
   }
 }
