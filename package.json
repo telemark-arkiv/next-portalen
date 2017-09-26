@@ -59,8 +59,8 @@
     "muicss": "0.9.15",
     "next": "3.2.2",
     "node-session": "1.2.1",
+    "react": "15.6.2",
     "react-dom": "15.6.2",
-    "react": "15.5.4",
     "simple-encryptor": "1.1.0"
   }
 }
