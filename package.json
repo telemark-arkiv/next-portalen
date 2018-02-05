@@ -57,7 +57,7 @@
     "jws": "3.1.4",
     "micro": "9.1.0",
     "muicss": "0.9.15",
-    "next": "4.2.3",
+    "next": "5.0.0",
     "node-session": "1.2.1",
     "react-dom": "16.2.0",
     "simple-encryptor": "1.1.1"
